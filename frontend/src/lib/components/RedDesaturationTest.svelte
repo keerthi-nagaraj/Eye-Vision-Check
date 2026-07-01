@@ -220,9 +220,12 @@
 				{getInference().recommendation}
 			</p>
 
-			<button on:click={restart}>
-				Retake Test
-			</button>
+			<div class="button-group">
+				<button on:click={restart}>
+					🔄 Retake Test
+				</button>
+				<a href="/" class="home-button">🏠 Back to Home</a>
+			</div>
 		</div>
 	{/if}
 </div>
@@ -356,6 +359,32 @@
 
 	button:active {
 		transform: translateY(0);
+	}
+
+	.button-group {
+		display: flex;
+		gap: 12px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.home-button {
+		padding: 1rem 2rem;
+		background: #6b7280;
+		color: white;
+		text-decoration: none;
+		border: none;
+		border-radius: 12px;
+		font-size: 1.1rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		display: inline-block;
+	}
+
+	.home-button:hover {
+		background: #4b5563;
+		transform: translateY(-2px);
 	}
 
 	.result {

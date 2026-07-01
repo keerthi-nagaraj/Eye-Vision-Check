@@ -849,6 +849,13 @@
 
 					</div>
 
+					<div class="button-group">
+						<button class="reset-button" on:click={resetTest}>
+							🔄 Retake Test
+						</button>
+						<a href="/" class="home-button">🏠 Back to Home</a>
+					</div>
+
 				</div>
 
 			{/if}
@@ -1024,6 +1031,48 @@
 		background: #9ca3af;
 		color: white;
 		cursor: not-allowed;
+	}
+
+	.button-group {
+		display: flex;
+		gap: 12px;
+		justify-content: center;
+		align-items: center;
+		margin-top: 20px;
+	}
+
+	.reset-button {
+		padding: 12px 24px;
+		border-radius: 8px;
+		font-size: 16px;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.2s;
+		border: none;
+		background: #3b82f6;
+		color: white;
+	}
+
+	.reset-button:hover {
+		background: #2563eb;
+	}
+
+	.home-button {
+		padding: 12px 24px;
+		background: #6b7280;
+		color: white;
+		text-decoration: none;
+		border: none;
+		border-radius: 8px;
+		font-size: 16px;
+		font-weight: 600;
+		cursor: pointer;
+		transition: background 0.2s;
+		display: inline-block;
+	}
+
+	.home-button:hover {
+		background: #4b5563;
 	}
 
 	.color-cap {

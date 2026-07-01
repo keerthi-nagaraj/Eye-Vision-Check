@@ -439,9 +439,12 @@
           </div>
         </div>
 
-        <button class="btn btn-primary btn-lg btn-glow" on:click={resetTest}>
-          Retake Test
-        </button>
+        <div class="button-group">
+          <button class="btn btn-primary btn-lg btn-glow" on:click={resetTest}>
+            🔄 Retake Test
+          </button>
+          <a href="/" class="home-button">🏠 Back to Home</a>
+        </div>
       </div>
     {/if}
   {/if}
@@ -1032,11 +1035,29 @@
     }
   }
 
-  .results-card .actions {
+  .button-group {
     display: flex;
-    gap: 15px;
+    gap: 12px;
     justify-content: center;
-    margin-top: 30px;
+    align-items: center;
+  }
+
+  .home-button {
+    padding: 14px 28px;
+    background: #6b7280;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-block;
+  }
+
+  .home-button:hover {
+    background: #4b5563;
   }
 
   /* COLOR WRAPS */

@@ -87,7 +87,10 @@
       <p>Category: {finalResult.category}</p>
       <p>Recommendation: {finalResult.recommendation}</p>
     </div>
-    <button class="btn" on:click={() => location.reload()}>Retake Test</button>
+    <div class="button-group">
+      <button class="btn" on:click={() => location.reload()}>🔄 Retake Test</button>
+      <a href="/" class="home-button">🏠 Back to Home</a>
+    </div>
   </div>
 {:else}
   <div class="container">
@@ -166,6 +169,30 @@
   .btn:hover {
     background: var(--primary-dark);
   }
+
+  .button-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-button {
+    padding: 0.6rem 1.2rem;
+    background: #6b7280;
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-block;
+  }
+
+  .home-button:hover {
+    background: #4b5563;
+  }
+
   .input {
     width: 100%;
     padding: 0.5rem;

@@ -19,7 +19,14 @@
 	let shuffledShapes: string[] = [];
 	let shapeIndex = 0;
 
-	let results: any[] = [];
+	interface TestResult {
+		round: number;
+		target: string;
+		response: string;
+		correct: boolean;
+	}
+
+	let results: TestResult[] = [];
 
 	// Vision status variables
 	// Commented out WebSocket/NATS bridge connection
@@ -422,7 +429,10 @@
 				{/each}
 			</div>
 
-			<button class="retake-button" on:click={resetTest}>🔄 Retake Test</button>
+			<div class="button-group">
+				<button class="retake-button" on:click={resetTest}>🔄 Retake Test</button>
+				<a href="/" class="home-button">🏠 Back to Home</a>
+			</div>
 		</div>
 	{/if}
 </div>
@@ -715,5 +725,30 @@
 
 	.retake-button:hover {
 		background: #2563eb;
+	}
+
+	.button-group {
+		display: flex;
+		gap: 12px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.home-button {
+		padding: 12px 24px;
+		background: #6b7280;
+		color: white;
+		text-decoration: none;
+		border: none;
+		border-radius: 8px;
+		font-size: 16px;
+		font-weight: 600;
+		cursor: pointer;
+		transition: background 0.2s;
+		display: inline-block;
+	}
+
+	.home-button:hover {
+		background: #4b5563;
 	}
 </style>

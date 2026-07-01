@@ -900,9 +900,12 @@ $: currentProgress = currentQuestionIndex + 1;
 					{/if}
 				</div> -->
 				
-				<button class="restart-button" on:click={resetTest}>
-					Retake Test
-				</button>
+				<div class="button-group">
+					<button class="restart-button" on:click={resetTest}>
+						🔄 Retake Test
+					</button>
+					<a href="/" class="home-button">🏠 Back to Home</a>
+				</div>
 			</div>
 		{/if}
 	{/if}
@@ -1321,5 +1324,30 @@ $: currentProgress = currentQuestionIndex + 1;
 
 	.restart-button:hover {
 		background: #555;
+	}
+
+	.button-group {
+		display: flex;
+		gap: 12px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.home-button {
+		padding: 16px 48px;
+		font-size: 18px;
+		font-weight: 700;
+		background: #6b7280;
+		color: white;
+		text-decoration: none;
+		border: none;
+		border-radius: 12px;
+		cursor: pointer;
+		transition: background 0.2s;
+		display: inline-block;
+	}
+
+	.home-button:hover {
+		background: #4b5563;
 	}
 </style>

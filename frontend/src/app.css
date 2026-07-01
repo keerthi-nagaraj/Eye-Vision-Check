@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-hi: #ffffff;
+  --text-mid: #e0e0e0;
+  --text-lo: #b0b0b0;
+  --bg-warm: #24001f;
+  --bg-warm-dark: #24001f;
+  --accent-purple: #a902dc;
+  --accent-blue: #00d4ff;
+  --accent-dark-blue: #090979;
+  --accent-dark-purple: #24001f;
+  color-scheme: dark;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #eff2f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.circular-container {
+  width: 1080px;
+  height: 1080px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background:white;
+/* background: linear-gradient(
+  135deg,
+  #2563eb,
+  #7c3aed,
+  #ec4899
+); */
+ display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.circular-container > * {
+  width: 1080px;
+  height: 1080px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Replace pure white with warm off-white */
+[class*="text-white"],
+.text-white {
+  color: #333 !important;
+}
+
+[class*="bg-white"],
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+/* Use purple/blue theme colors */
+[class*="text-blue-"],
+.text-blue-,
+[class*="bg-blue-"],
+.bg-blue- {
+  color: var(--accent-blue) !important;
+  background-color: var(--accent-blue) !important;
+}
+
+[class*="text-purple-"],
+.text-purple-,
+[class*="bg-purple-"],
+.bg-purple- {
+  color: var(--accent-purple) !important;
+  background-color: var(--accent-purple) !important;
+}
+
+[class*="text-indigo-"],
+.text-indigo-,
+[class*="bg-indigo-"],
+.bg-indigo- {
+  color: var(--accent-purple) !important;
+  background-color: var(--accent-purple) !important;
+}
+
+/* Replace red with purple for warnings */
+[class*="text-red-"],
+.text-red-,
+[class*="bg-red-"],
+.bg-red- {
+  color: var(--accent-purple) !important;
+  background-color: var(--accent-purple) !important;
+}
+
+/* Green remains green */
+[class*="text-green-"],
+.text-green- {
+  color: #8fb060 !important;
+}
+
+/* Light backgrounds */
+[class*="bg-gray-50"],
+.bg-gray-50,
+[class*="bg-gray-100"],
+.bg-gray-100 {
+  background-color: #f8fafc !important;
+}
+
+[class*="bg-gray-200"],
+.bg-gray-200 {
+  background-color: #e2e8f0 !important;
+}
+
+/* Dark text colors */
+[class*="text-gray-900"],
+.text-gray-900,
+[class*="text-gray-800"],
+.text-gray-800,
+[class*="text-gray-700"],
+.text-gray-700 {
+  color: #1e293b !important;
+}
+
+[class*="text-gray-600"],
+.text-gray-600,
+[class*="text-gray-500"],
+.text-gray-500 {
+  color: #64748b !important;
+}
+
+[class*="text-gray-400"],
+.text-gray-400 {
+  color: #94a3b8 !important;
+}
+
+/* Light borders */
+[class*="border-gray-200"],
+.border-gray-200 {
+  border-color: #e2e8f0 !important;
+}
+
+[class*="border-gray-300"],
+.border-gray-300 {
+  border-color: #cbd5e1 !important;
+}
+
+
+/* Remove scrollbars */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}

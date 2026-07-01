@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@mediapipe/camera_utils": "^0.3.1675466862"
+  }
+}
